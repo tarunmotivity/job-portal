@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, #adc6ff 0%, #4d8eff 100%);
+}
+
+.ghost-border {
+  border: 1px solid rgba(66, 71, 84, 0.15);
+}
+* {
+  transition: all 0.2s ease;
+}
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  background: #131313;
+  color: #e5e2e1;
+  font-family: 'Inter', sans-serif;
+}
+
+.glow-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.glow-card::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(59,130,246,0.15), transparent 70%);
+  top: -50px;
+  right: -50px;
+  filter: blur(40px);
+  transition: 0.4s;
+}
+
+.glow-card:hover::before {
+  transform: scale(1.2);
+  opacity: 1;
+}

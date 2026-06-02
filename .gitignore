@@ -1,0 +1,25 @@
+# --- DEPENDENCIES (Both) ---
+node_modules/
+.pnpm-store/
+
+# --- BACKEND SPECIFIC ---
+.env
+.env.backend
+*.log
+uploads/
+pm2.log
+
+# --- FRONTEND SPECIFIC ---
+build/
+dist/
+.next/
+.env.local
+.env.development.local
+.env.production.local
+.eslintcache
+
+# --- IDE & SYSTEM (Both) ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
