@@ -22,11 +22,9 @@ API.interceptors.response.use(
   async (error) => {
     if (error.response?.status === 401) {
       try {
-        const { data } = await axios.post(
-          "http://localhost:5000/api/auth/refresh",
-          {},
-          { withCredentials: true }
-        );
+        const { data } = axios.post("/api/auth/refresh", {}, {
+          withCredentials: true,
+        });
 
         const user = JSON.parse(localStorage.getItem("user"));
 

@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./server
+    container_name: jobportal-backend
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./server/.env
+
+  frontend:
+    build: ./client
+    container_name: jobportal-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend

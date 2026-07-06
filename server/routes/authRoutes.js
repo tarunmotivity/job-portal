@@ -36,14 +36,14 @@ router.get(
     
     if (!req.user.role) {
       return res.redirect(
-        `http://localhost:5173/select-role?token=${token}`
-      );
+  `${process.env.CLIENT_URL}/select-role?token=${token}`
+);
     }
 
     
     res.redirect(
-      `http://localhost:5173/oauth-success?token=${token}&role=${req.user.role}&name=${req.user.name}&email=${req.user.email}`
-    );
+  `${process.env.CLIENT_URL}/oauth-success?token=${token}&role=${req.user.role}&name=${req.user.name}&email=${req.user.email}`
+);
   }
 );
 
