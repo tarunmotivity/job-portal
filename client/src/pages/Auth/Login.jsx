@@ -145,7 +145,7 @@ function Login() {
             <button
               type="button"
               onClick={() => {
-                window.location.href = "http://localhost:5000/api/auth/google";
+               window.location.href = "http://15.206.27.89:5000/api/auth/google";
               }}
               className="w-full flex items-center justify-center gap-3 bg-surface-container-lowest ghost-border rounded-xl px-4 py-3 text-on-surface font-label font-medium tracking-wide transition-all hover:bg-surface-container hover:shadow-lg hover:shadow-black/20 active:scale-[0.98]"
             >
